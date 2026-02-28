@@ -1,0 +1,38 @@
+<div id="welcomePopup" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm px-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden transform transition-all">
+        <div class="bg-green-700 p-6 text-white text-center">
+            <div class="text-4xl mb-2">👋</div>
+            <h2 class="text-2xl font-bold">Sannu! Welcome to Catch Them Young</h2>
+            <p class="text-green-100 text-sm">Empowering the youth of Bauchi State</p>
+        </div>
+        
+        <div class="p-8 text-center">
+            <p class="text-gray-600 mb-6 leading-relaxed">
+                We are on a mission to transform lives through <strong>Livelihood, Nutrition, and WASH</strong>. Did you know our pupils in Bauchi are already mastering programming languages?
+            </p>
+            
+            <div class="space-y-3">
+                <a href="stories.html" class="block w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700 transition">
+                    See Our Success Stories
+                </a>
+                <button onclick="closePopup()" class="block w-full text-gray-400 hover:text-gray-600 text-sm font-medium">
+                    Maybe Later
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Show popup after 2 seconds
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('welcomePopup').classList.remove('hidden');
+        }, 2000);
+    };
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById('welcomePopup').classList.add('hidden');
+    }
+</script>
